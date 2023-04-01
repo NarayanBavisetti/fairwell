@@ -5,6 +5,10 @@ const UserSchema = new mongoose.Schema<UserInterface>({
   email: { type: String, required: true, unique: true },
   username: { type: String, required: true },
   password: { type: String, required: true },
+  
+},
+{
+  timestamps: true
 });
 
 const UserModel =

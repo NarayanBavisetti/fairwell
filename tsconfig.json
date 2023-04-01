@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "pages/signin.tsxx", "pages/signin.tsx", "models/usersModel.tsxx", "models/usersModel.ts"  ],
+, "pages/signin.tsxx", "pages/signin.tsx", "models/usersModel.tsxx", "models/usersModel.tsxx"  ],
   "exclude": [
     "node_modules"
   ]
