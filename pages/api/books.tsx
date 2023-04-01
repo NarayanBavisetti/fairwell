@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import connectMongoDB from "../../lib/mongoDB";
-import BookModel from "../../models/authorModel";
+import BookModel from "../../models/booksModel";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     connectMongoDB().catch((error) => res.json({ error: "Connection Failed" }));
@@ -20,7 +20,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
           const user = await BookModel.create(req.body);
           res.status(201).json({ success: true, data: user });
         } catch (error) {
-          res.status(400).json({ success: false });
+          res.status(400).json({ success: false,data:error });
         }
         break;
       case 'PUT':

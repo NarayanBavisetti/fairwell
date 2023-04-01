@@ -1,11 +1,11 @@
 import axios from "axios";
 // api routes
-import { PUBLISHER_ENDPOINT, PUBLISHER_WITH_ID_ENDPOINT } from "../../constants/api-routes";
+import { BOOKS_ENDOINT, BOOK_WITH_ID_ENDPOINT } from "../../constants/api-routes";
 
-export const Publisher = {
+export const Book = {
   create: async (data: any) => {
     try {
-      const response = await axios.post(PUBLISHER_ENDPOINT, data);
+      const response = await axios.post(BOOKS_ENDOINT, data);
       return response.data;
     } catch (error: any) {
       throw error.response.data;
@@ -13,7 +13,7 @@ export const Publisher = {
   },
   update: async (data: any) => {
     try {
-      const response = await axios.put(PUBLISHER_WITH_ID_ENDPOINT(data.id), data);
+      const response = await axios.put(BOOK_WITH_ID_ENDPOINT(data.id), data);
       return response.data;
     } catch (error: any) {
       throw error.response.data;
@@ -21,7 +21,7 @@ export const Publisher = {
   },
   delete: async (data: any) => {
     try {
-      const response = await axios.delete(PUBLISHER_WITH_ID_ENDPOINT(data.id));
+      const response = await axios.delete(BOOK_WITH_ID_ENDPOINT(data.id));
       return response.data;
     } catch (error: any) {
       throw error.response.data;

@@ -6,8 +6,8 @@ const bookSchema = new mongoose.Schema<PublisherInterface>({
   books: [{ type: mongoose.Schema.Types.ObjectId, ref: 'FairwellBooks' }],
 });
 
-const BookModel =
-  mongoose.models.FairwellBooks ||
+const PublisherModel =
+  mongoose.models.FairwellPublishers ||
   mongoose.model<PublisherInterface>("FairwellPublishers", bookSchema);
 
-export default BookModel;
+export default PublisherModel;

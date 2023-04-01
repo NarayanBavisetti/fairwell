@@ -13,7 +13,6 @@ export const Authentication = {
   emailSignUp: async (data: any) => {
     try {
       const response = await axios.post(SIGN_UP_ENDPOINT, data);
-      console.log(response,"services response")
       return response.data;
     } catch (error: any) {
       throw error;
